@@ -1,3 +1,4 @@
 [submodule "privly-applications"]
-	path = privly-applications
-	url = https://github.com/privly/privly-applications.git
+  path = privly-applications
+  url = https://github.com/privly/privly-applications.git
+  branch = experimental-pgp
