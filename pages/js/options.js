@@ -327,11 +327,14 @@ function validateContentServer(url) {
 function listeners(){
   
   //Glyph generation
-  document.querySelector('#regenerate_glyph').addEventListener('click', regenerateGlyph);
+  document.querySelector('#regenerate_glyph').addEventListener('click',
+    regenerateGlyph);
   
   // Options save button
   document.querySelector('#save').addEventListener('click', saveWhitelist);
   document.querySelector('#save_email').addEventListener('click', saveEmail);
+  document.querySelector('#save_directory').addEventListener('click',
+    saveDirectoryURL);
     
   // content server menu listeners
   document.querySelector('#alpha').addEventListener('click', saveServer);
@@ -393,6 +396,13 @@ function saveEmail(){
   var email = document.getElementById("emailAddress").value;
   localforage.setDriver('localStorageWrapper',function(){
     localforage.setItem('email',email);
+  });
+}
+
+function saveDirectoryURL(){
+  var directoryURL= document.getElementById("directoryURL").value;
+  localforage.setDriver('localStorageWrapper',function(){
+    localforage.setItem('directoryURL',directoryURL);
   });
 }
 
