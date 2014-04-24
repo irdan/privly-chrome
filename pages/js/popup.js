@@ -62,6 +62,9 @@ $("#PlainPost").click(function(){
   window.open("/privly-applications/PlainPost/new.html","PlainPost",
     windowOptions);
 });
+$("#pgp").click(function(){
+  window.open("/privly-applications/pgp/new.html","ZeroBin", windowOptions);
+});
 $("#ZeroBin").click(function(){
   window.open("/privly-applications/ZeroBin/new.html","ZeroBin", windowOptions);
 });
