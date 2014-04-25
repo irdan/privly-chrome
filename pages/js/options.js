@@ -128,7 +128,21 @@ function restoreWhitelist() {
 function restore_server(){
   
   var posting_content_server_url = localStorage["posting_content_server_url"];
+  var directory_url = localStorage["directoryURL"];
+  var stored_email = localStorage["email"];
   
+  if (stored_email) {
+    var email = document.getElementById("emailAddress");
+    var val = stored_email.replace(/"/g,"");
+    email.value = val;
+  }
+
+  if (directory_url) {
+    var directoryURL = document.getElementById("directoryURL");
+    var val = directory_url.replace(/"/g,"");
+    directoryURL.value = val;
+  }
+
   // check for local storage content
   if (!posting_content_server_url) {
     return;
