@@ -135,11 +135,11 @@ function getApplicationInjectionUrlResponse(request, sender, sendResponse) {
         chrome.extension.getURL(
           "privly-applications/ZeroBin/show.html?privlyOriginalURL=" + 
           encodeURIComponent(url))});
-  } else if( url.indexOf("privlyInjectableApplication=pgp") > 0 || // deprecated
-             url.indexOf("privlyApp=pgp") > 0) {
+  } else if( url.indexOf("privlyInjectableApplication=PGP") > 0 || // deprecated
+             url.indexOf("privlyApp=PGP") > 0) {
     sendResponse({
       privlyApplicationURL: 
-        chrome.extension.getURL("privly-applications/pgp/show.html?privlyOriginalURL=" + 
+        chrome.extension.getURL("privly-applications/PGP/show.html?privlyOriginalURL=" + 
         encodeURIComponent(url))});
   } else if( url.indexOf("privlyInjectableApplication=PlainPost") > 0 || // deprecated
              url.indexOf("privlyApp=PlainPost") > 0) {
