@@ -9,12 +9,12 @@
 /**
  * Receive the localStorage object from login.persona.org.
  * This is sent as a message from the login.persona.org.js
- * content script. The "persona-bridge" key in chrome
+ * content script. The "pgp-persona-bridge" key in chrome
  * context localStorage will be assigned to a strin
  */
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (typeof request.persona_bridge === "object") {
-      localStorage["persona-bridge"] = request.persona_bridge.localStorage;
+      localStorage["pgp-persona-bridge"] = request.persona_bridge.localStorage;
     }
 });

@@ -141,8 +141,8 @@ function restoreWhitelist() {
 function restore_server(){
   
   var posting_content_server_url = localStorage["posting_content_server_url"];
-  var directory_url = localStorage["directoryURL"];
-  var stored_email = localStorage["email"];
+  var directory_url = localStorage["pgp-directoryURL"];
+  var stored_email = localStorage["pgp-email"];
   var server_input = document.getElementById("content_server_url");
   
   if (stored_email) {
@@ -331,7 +331,7 @@ function writeGlyph() {
 function saveEmail(){
   var email = document.getElementById("emailAddress").value;
   localforage.setDriver('localStorageWrapper',function(){
-    localforage.setItem('email',email);
+    localforage.setItem('pgp-email',email);
   });
 }
 
@@ -341,7 +341,7 @@ function saveEmail(){
 function saveDirectoryURL(){
   var directoryURL= document.getElementById("directoryURL").value;
   localforage.setDriver('localStorageWrapper',function(){
-    localforage.setItem('directoryURL',directoryURL);
+    localforage.setItem('pgp-directoryURL',directoryURL);
   });
 }
 
