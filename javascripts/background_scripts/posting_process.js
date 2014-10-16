@@ -216,10 +216,10 @@ chrome.contextMenus.create({
   });
 // Creates the pgp context menu
 chrome.contextMenus.create({
-    "title": "Post with pgp",
+    "title": "Post with PGP",
     "contexts": ["editable"],
     "onclick" : function(info, tab) {
-        postingHandler(info, tab, "pgp");
+        postingHandler(info, tab, "PGP");
     }
   });
   
